@@ -1,0 +1,14 @@
+namespace DataWareHouse.Database;
+
+using DataWareHouse.Database :: Types;
+using DataWareHouse.Database :: UNIT;
+
+entity "INGREDIENCE" {
+   key "INGREDIENCEID" : "Types"."IDENTIFIER" not null;
+   "INGREDIENCENAME"   : "Types"."DESCRIPTION";
+   "COST"              : "Types"."AMOUNT";
+   "UNIT_1"            : association to "UNIT";
+}
+technical configuration {
+   column store;
+};

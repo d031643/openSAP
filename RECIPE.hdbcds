@@ -1,0 +1,13 @@
+namespace DataWareHouse.Database;
+
+using DataWareHouse.Database :: Types;
+
+entity "RECIPE" {
+   key "RECIPEID" : "Types"."IDENTIFIER" not null;
+   "RECIPENAME"   : "Types"."DESCRIPTION";
+   "RECIPEPRIZE1" : "Types"."AMOUNT";
+   "RECIPEPRIZE"  : "Types"."AMOUNT";
+}
+technical configuration {
+   column store;
+};

@@ -1,0 +1,12 @@
+namespace DataWareHouse.Database;
+
+using DataWareHouse.Database :: BUSINESSPARTNER;
+
+entity "SHAREHOLDING" {
+   key "BUSINESSPARTNER_1" : association to "BUSINESSPARTNER" not null;
+   key "BUSINESSPARTNER_2" : association to "BUSINESSPARTNER" not null;
+   "SHARES"                : Decimal(22, 4);
+}
+technical configuration {
+   column store;
+};

@@ -1,0 +1,15 @@
+namespace DataWareHouse.Database;
+
+using DataWareHouse.Database :: Types;
+
+entity "SALESORDER" {
+   key "ORDERID"       : "Types"."IDENTIFIER" not null;
+   "ORDERDATE"         : UTCDateTime;
+   "ORDERPAYMENTMTHOD" : String(1);
+   "ORDERSTATUS"       : String(1);
+   "ORDERTOTALAMOUNT"  : "Types"."AMOUNT";
+   "ORDERTOTALTAX"     : "Types"."AMOUNT";
+}
+technical configuration {
+   column store;
+};
